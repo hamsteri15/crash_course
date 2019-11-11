@@ -1,0 +1,4 @@
+#Implement classes Array2d, DifferenceOperator, Writer and HeatEquation and solve the two dimensional heat equation 
+with Dirichlet boundaries on all sides of the domain. You are free to choose the heat conductivity, domain dimensions and
+node count as you please but make sure that you are able to visualize the mesh and the solution somehow.
+

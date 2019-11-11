@@ -1,0 +1,2 @@
+#Implement the class Person and compile the project using CMake. This means that you need to write the correct CMakeLists.txt files 
+in to the base folder 'Module_0_intro' and ./src . You can use the other Modules as an example for writing CMake files.

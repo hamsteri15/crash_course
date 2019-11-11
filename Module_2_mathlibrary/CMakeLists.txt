@@ -1,0 +1,60 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+
+PROJECT(Math)
+
+
+
+
+ENABLE_TESTING()
+
+# ensure C++14
+SET(CMAKE_CXX_STANDARD 14)
+SET(CMAKE_CXX_STANDARD_REQUIRED ON)
+SET(CMAKE_CXX_EXTENSIONS OFF)
+
+#export compiler flags for code completion engines
+SET( CMAKE_EXPORT_COMPILE_COMMANDS 1 )
+
+SET(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
+
+
+
+ADD_COMPILE_OPTIONS(-std=c++14  -Wall -pedantic -DDEBUG)
+
+#Set library and binary paths
+SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+
+
+
+#Solver application binary output dir
+SET(APP_BINARY_DIR ${CMAKE_BINARY_DIR}/bin/app)
+
+#Test binary output dir
+SET(TEST_BINARY_DIR ${CMAKE_BINARY_DIR}/bin/tests)
+
+
+#Build the math library
+INCLUDE_DIRECTORIES(lib)
+ADD_SUBDIRECTORY(lib)
+    
+
+#Build applications
+INCLUDE_DIRECTORIES(src)
+ADD_SUBDIRECTORY(src)
+
+#Build tests
+INCLUDE_DIRECTORIES(tests)
+ADD_SUBDIRECTORY(tests)
+
+
+
+
+
+
+
+
+
+
+
+

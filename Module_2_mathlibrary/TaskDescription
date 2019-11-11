@@ -1,0 +1,19 @@
+#Here the task is to first generate a math library with objects 'vector' and 'matrix' that support math operations. 
+For simplicity you can constrain the operations only to be vector against vector and matrix against matrix. 
+In addition to that, scalar operations need to be defined for both of them i.e. matrix * matrix and matrix * scalar should 
+be defined whereas matrix * vector does not.
+
+#For every function you generate in the math library, make sure you write a corresponding unit test into the tests folder as you go.
+
+
+
+#Folders:
+lib/math   #math library source
+src/       #applications that use the math library
+tests/math #unittests for the math library !This folder is missing a CMakeLists.txt file that you need to create yourself.
+
+
+#Compile lib/math/* into a _library_ called mathlib and write an application
+
+
+

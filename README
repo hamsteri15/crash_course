@@ -1,0 +1,25 @@
+#This folder contains a crash course on C++ for CFD engineers. The idea is that the problems here are somewhat generic and you have 
+a lot of freedom in the choice of implementation. 
+
+
+#All modules should compile with the following lines:
+
+cd <ModuleName>
+mkdir build
+cmake ..
+make
+
+
+#Module description:
+-Module_0_intro 
+ An introduction to classes and the CMake compilation framework. 
+
+-Module_1_memory
+ Memory management/containers/IO. 
+
+-Module_2_mathlibrary
+ Operator overloading, Libraries and unittesting
+
+-Module_3_mpi
+ MPI communication <This is not done yet!>
+
