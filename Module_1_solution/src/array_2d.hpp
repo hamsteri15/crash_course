@@ -5,7 +5,7 @@
 #include <vector> //std::vector
 #include <cstddef> //size_t
 #include <stdexcept> //std::runtime_error
-
+#include <algorithm>  //std::min/max_element
 struct Dimensions2d{
     size_t nj, nbj, ni, nbi;
 
@@ -58,6 +58,17 @@ public:
     const std::vector<double> get_data() const {return m_data;}
 
     
+    double min() const {
+        return *std::min_element( m_data.begin(), m_data.end() );
+        
+    }
+
+    double max() const {
+        return *std::max_element( m_data.begin(), m_data.end() );
+        
+    }
+
+
 
     //get loop bounds of the interior, i.e. neglect barriers
     size_t i_begin() const {return m_dims.nbi;}

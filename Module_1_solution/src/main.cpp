@@ -15,11 +15,11 @@ int main(){
 
     HeatEqInputs inputs;
 
-    inputs.kappa = 0.1;
-    inputs.runtime = 10.0;
+    inputs.kappa = 1.0;
+    inputs.runtime = 100.0;
     inputs.timestep = 0.1;
-    inputs.nx = 10;
-    inputs.ny = 10;
+    inputs.nx = 251;
+    inputs.ny = 251;
     inputs.Lx = 1.0;
     inputs.Ly = 1.0;
     inputs.initial_condition = 0.0;

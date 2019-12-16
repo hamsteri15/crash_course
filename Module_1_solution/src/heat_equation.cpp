@@ -19,7 +19,7 @@ Array2d HeatEquation::solve(){
 
     double time = 0.0;
 
-    while (time <= m_inputs.runtime){
+    while (time < m_inputs.runtime){
 
         m_boundaries.apply(T);
 
@@ -30,9 +30,9 @@ Array2d HeatEquation::solve(){
 
         time+=m_inputs.timestep;
 
-        std::cout << "Time: " << time << '\n'
-                  << "Max Temperature: " << '\n'
-                  << "Min Temperature: " << '\n'
+        std::cout << "Time: " << time << " "
+                  << "Max Temperature: " << T.max() << " "
+                  << "Min Temperature: " << T.min() << " "
                   << std::endl;
     }
 
