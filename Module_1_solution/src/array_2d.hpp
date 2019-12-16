@@ -39,6 +39,18 @@ public:
 
     const Dimensions2d& get_dims() const {return m_dims;}
 
+    //get the interior and neglect barriers
+    Array2d get_interior() const{
+
+        Array2d ret(m_dims.nj, 0, m_dims.ni, 0);
+
+        for (size_t j = 0; j < m_dims.nj; ++j){
+        for (size_t i = 0; i < m_dims.ni; ++i){
+            ret(j,i) = this->operator()(j - m_dims.nbj, i - m_dims.nbi);
+        }}
+        return ret;
+    }
+
     //total storage size
     size_t size() const {return m_data.size();}
 
@@ -78,7 +90,7 @@ public:
     double& operator()(size_t idx){ return m_data[idx]; }
         
     
-
+    //in debug mode, apply bounds checking
     #ifdef DEBUG
     void bounds_check(size_t j, size_t i) const {
         if (j >= m_dims.nj + 2*m_dims.nbj){

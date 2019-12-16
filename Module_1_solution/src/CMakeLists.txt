@@ -8,6 +8,9 @@ SET(Headers
     ./equation.hpp
     ./heat_equation.hpp
     ./difference_operator.hpp
+    ./boundary.hpp;
+    ./boundary_dirichlet.hpp;
+    ./boundaries.hpp;
 )
 
 
@@ -22,6 +25,9 @@ SET(Sources
     ./equation.cpp
     ./heat_equation.cpp
     ./difference_operator.cpp
+    ./boundary.cpp;
+    ./boundary_dirichlet.cpp;
+    ./boundaries.cpp;
 )
 
 #create an executable

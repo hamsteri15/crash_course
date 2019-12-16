@@ -2,12 +2,13 @@ SET(TestSources
     test.cpp;
     test_array2d.cpp;
     test_difference_operator.cpp;
-    
+    test_boundary_dirichlet.cpp;
 )
 
 SET(AppSources
     ${CMAKE_SOURCE_DIR}/src/array_2d.cpp;
     ${CMAKE_SOURCE_DIR}/src/difference_operator.cpp;
+    ${CMAKE_SOURCE_DIR}/src/boundary_dirichlet.cpp;
 )
 
 
