@@ -1,11 +1,21 @@
 #ifndef Array2d_hh
 #define Array2d_hh
 
+
+/*
+Header only two-dimensional array class with support for basic arithmetic operations.
+The implementation is quite naive and the operator overloads could probably be improved.
+*/
+
 #include <iostream>
 #include <vector> //std::vector
 #include <cstddef> //size_t
 #include <stdexcept> //std::runtime_error
 #include <algorithm>  //std::min/max_element
+
+
+
+//Dimension handle
 struct Dimensions2d{
     size_t nj, nbj, ni, nbi;
 
@@ -18,6 +28,7 @@ struct Dimensions2d{
     }
 
 };
+
 
 class Array2d{
 	

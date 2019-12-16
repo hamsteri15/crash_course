@@ -3,6 +3,11 @@
 
 #include "array_2d.hpp"
 
+/*
+Second order difference operator for first and second derivatives
+*/
+
+
 class DifferenceOperator{
 	
 public:

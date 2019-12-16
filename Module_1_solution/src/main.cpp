@@ -16,7 +16,7 @@ int main(){
     HeatEqInputs inputs;
 
     inputs.kappa = 1.0;
-    inputs.runtime = 100.0;
+    inputs.runtime = 1000.0;
     inputs.timestep = 0.1;
     inputs.nx = 251;
     inputs.ny = 251;
